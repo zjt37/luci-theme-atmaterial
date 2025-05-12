@@ -6,19 +6,19 @@
 
 include $(TOPDIR)/rules.mk
 
-LUCI_TITLE:=Material Theme
+LUCI_TITLE:=atmaterial Theme
 LUCI_DEPENDS:=+luci-base
 
 PKG_LICENSE:=Apache-2.0
 
-define Package/luci-theme-material/postrm
+define Package/luci-theme-atmaterial/postrm
 #!/bin/sh
 [ -n "$${IPKG_INSTROOT}" ] || {
-	uci -q delete luci.themes.Material
+	uci -q delete luci.themes.atmaterial
 	uci commit luci
 }
 endef
 
-include ../../luci.mk
+include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature

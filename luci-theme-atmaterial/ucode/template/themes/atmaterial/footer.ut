@@ -26,7 +26,7 @@
 		</div>
 	</div>
 
-	<script>L.require('menu-material')</script>
+	<script>L.require('menu-atmaterial')</script>
 
 </body>
 </html>
